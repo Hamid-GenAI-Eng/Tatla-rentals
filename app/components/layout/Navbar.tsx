@@ -49,39 +49,9 @@ export default function Navbar() {
               Call Now
             </a>
             
-            {/* Mobile Toggle */}
-            <button 
-                className="md:hidden text-white"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-                {isMobileMenuOpen ? <X /> : <Menu />}
-            </button>
           </div>
         </div>
       </nav>
-
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background-dark/95 backdrop-blur-xl pt-24 px-6 md:hidden">
-            <div className="flex flex-col gap-8">
-                {[
-                  { label: "Home", href: "/" },
-                  { label: "The Fleet", href: "/fleet" },
-                  { label: "Services", href: "/services" },
-                  { label: "About Us", href: "/about" },
-                ].map((item) => (
-                <Link
-                    key={item.label}
-                    href={item.href}
-                    className="text-2xl font-bold text-white hover:text-primary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                >
-                    {item.label}
-                </Link>
-                ))}
-             </div>
-        </div>
-      )}
     </>
   );
 }

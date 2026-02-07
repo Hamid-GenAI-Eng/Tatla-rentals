@@ -1,14 +1,14 @@
 "use client";
 
-import { Home, Car, Shield, User } from "lucide-react";
+import { Home, Car, Shield, Info } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
   { icon: Home, label: "Home", href: "/" },
-  { icon: Car, label: "Fleet", href: "#" },
-  { icon: Shield, label: "Services", href: "#" },
-  { icon: User, label: "Account", href: "#" },
+  { icon: Car, label: "Fleet", href: "/fleet" },
+  { icon: Shield, label: "Services", href: "/services" },
+  { icon: Info, label: "About", href: "/about" },
 ];
 
 export default function MobileBottomNav() {
