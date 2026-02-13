@@ -29,14 +29,14 @@ export default function Fleet({ initialVehicles = [] }: { initialVehicles?: Vehi
                 // For now, simplify by just taking the first 3 or specific IDs if we want to mimic "Curated"
                 // Using specific IDs to maintain the "Curated" look
                 const curatedIds = ["land-cruiser-zx", "fortuner-legender", "civic-rs"];
-                const featured = data.filter((v: Vehicle) => curatedIds.includes(v.id));
+                const featured = data.filter((v: Vehicle) => v.id && curatedIds.includes(v.id));
                 setFleet(featured.length > 0 ? featured : data.slice(0, 3)); 
             })
             .catch(err => console.error(err));
     } else {
         // If passed from server, also filter for curated list
         const curatedIds = ["land-cruiser-zx", "fortuner-legender", "civic-rs"];
-        const featured = initialVehicles.filter((v: Vehicle) => curatedIds.includes(v.id));
+        const featured = initialVehicles.filter((v: Vehicle) => v.id && curatedIds.includes(v.id));
          setFleet(featured.length > 0 ? featured : initialVehicles.slice(0, 3));
     }
   }, [initialVehicles]);
