@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-6xl md:text-8xl font-bold text-white leading-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-8xl font-bold text-white leading-tight mb-6"
           >
             Drive the{" "}
             <span className="silver-gradient italic block">Extraordinary.</span>
@@ -68,9 +68,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row gap-4"
           >
-            <Link href="/fleet" className="bg-primary text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest flex items-center gap-3 hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95">
+            <Link href="/fleet" className="bg-primary text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-3 hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95 w-full sm:w-auto">
               Explore Fleet
               <ArrowRight className="w-5 h-5" />
             </Link>
@@ -78,7 +78,7 @@ export default function Hero() {
               href="https://wa.me/923017672571?text=Hi,%20I%20would%20like%20to%20request%20a%20callback."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white/5 backdrop-blur-md border border-white/10 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all hover:scale-105 active:scale-95"
+              className="bg-white/5 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all hover:scale-105 active:scale-95 text-center w-full sm:w-auto"
             >
               Request a CallBack
             </a>

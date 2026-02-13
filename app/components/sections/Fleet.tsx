@@ -149,7 +149,7 @@ export default function Fleet({ initialVehicles = [] }: { initialVehicles?: Vehi
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 50 }}
-                  className="relative w-full max-w-5xl bg-[#111] border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] shadow-2xl"
+                  className="relative w-full max-w-5xl bg-[#111] border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row h-[85vh] md:h-auto md:max-h-[90vh] shadow-2xl"
                   onClick={(e) => e.stopPropagation()} // Prevent closing when clicking modal content
                >
                   {/* Close Button */}
@@ -161,7 +161,7 @@ export default function Fleet({ initialVehicles = [] }: { initialVehicles?: Vehi
                   </button>
 
                   {/* Left: Gallery */}
-                  <div className="w-full md:w-1/2 bg-black relative flex flex-col">
+                  <div className="w-full md:w-1/2 bg-black relative flex flex-col h-[40vh] md:h-auto shrink-0">
                       <div className="flex-grow relative">
                            <img 
                               src={selectedVehicle.gallery[activeImageIndex]} 

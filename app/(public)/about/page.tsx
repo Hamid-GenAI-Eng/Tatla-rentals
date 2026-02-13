@@ -42,7 +42,7 @@ export default function AboutPage() {
             <History className="text-primary w-4 h-4" />
             <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">Est. 1998</span>
           </div>
-          <h2 className="text-5xl md:text-8xl font-bold text-white leading-tight mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-8xl font-bold text-white leading-tight mb-6">
             The Legacy of <br/><span className="bg-gradient-to-br from-slate-200 via-slate-400 to-slate-300 bg-clip-text text-transparent italic">Excellence.</span>
           </h2>
           <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-10 max-w-2xl mx-auto">

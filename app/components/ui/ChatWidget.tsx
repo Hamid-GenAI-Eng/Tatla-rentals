@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function ChatWidget() {
   return (
-    <div className="fixed bottom-8 right-8 z-[100] group">
+    <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-[100] group">
       <div className="absolute -top-1 -right-1 size-5 bg-primary rounded-full border-2 border-midnight flex items-center justify-center z-10 animate-bounce">
         <span className="text-[10px] font-bold text-white">1</span>
       </div>
