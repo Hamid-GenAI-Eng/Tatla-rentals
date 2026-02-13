@@ -1,4 +1,4 @@
-import FleetClient from "../components/sections/FleetClient";
+import FleetClient from "../../components/sections/FleetClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function FleetPage() {
-  return <FleetClient />;
+  return <FleetClient initialVehicles={[]} />;
 }

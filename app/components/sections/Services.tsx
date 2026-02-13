@@ -12,13 +12,13 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: "VIP Protection",
-    desc: "Comprehensive ultra-premium insurance coverage included for complete peace of mind.",
+    title: "Assured Quality",
+    desc: "Every vehicle is thoroughly checked, serviced, and cleaned to ensure reliability, comfort, and peace of mind throughout your journey.",
   },
   {
     icon: UserCheck,
     title: "24/7 Concierge",
-    desc: "Personalized assistant available around the clock to handle route planning and bookings.",
+    desc: "Specialized assistant available for you to handle route planning and bookings.",
   },
 ];
 

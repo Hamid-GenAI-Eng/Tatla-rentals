@@ -1,4 +1,4 @@
-import FleetCategoryClient from "../../components/sections/FleetCategoryClient";
+import FleetCategoryClient from "../../../components/sections/FleetCategoryClient";
 
 export async function generateStaticParams() {
   return [

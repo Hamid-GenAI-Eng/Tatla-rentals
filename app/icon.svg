@@ -1,0 +1,7 @@
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 20 80 A 130 130 0 0 1 280 80" stroke="#333" stroke-width="4" stroke-linecap="round" />
+  <path d="M 40 75 L 50 65" stroke="#ec1313" stroke-width="3" />
+  <path d="M 260 75 L 250 65" stroke="#ec1313" stroke-width="3" />
+  <text x="150" y="65" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="68" fill="#ec1313" style="filter: drop-shadow(0px 0px 10px rgba(236, 19, 19, 0.3)); font-style: italic; letter-spacing: 0.05em">TATLA</text>
+  <text x="150" y="90" text-anchor="middle" font-family="sans-serif" font-weight="600" font-size="18" fill="white" style="letter-spacing: 0.4em">RENT A CAR</text>
+</svg>

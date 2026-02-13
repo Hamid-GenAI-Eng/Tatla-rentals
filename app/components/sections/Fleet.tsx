@@ -1,57 +1,61 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Armchair, Gauge } from "lucide-react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { Armchair, Gauge, X, Check, Calendar, MapPin, Fuel, Settings, User } from "lucide-react";
+import { Vehicle } from "@/app/types/vehicle";
 
-// Placeholder images from the provided HTML/request
-const fleet = [
-  {
-    id: 1,
-    name: "Mercedes G63 AMG",
-    desc: "V8 Biturbo | Black Matte Edition",
-    price: "$850",
-    seats: 5,
-    speed: "240 KM/H",
-    category: "SUVs",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
-    badge: "Available",
-    badgeColor: "bg-primary",
-  },
-  {
-    id: 2,
-    name: "Porsche 911 GT3",
-    desc: "Turbocharged | Alpine White",
-    price: "$1,200",
-    seats: 2,
-    speed: "312 KM/H",
-    category: "Sports",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBj51B7LloVO_k1oBuXMSVRWuqbxQQJAN4TRII-uUntRFaGaVjAW-p2AyosmQXWFA3XgG6ba2wsFFKHfSpbtPRVA_e6W2t5AQY14urLRmeKM6jbb1EvqUyUkzK3Eh-08bYk5AfitJyg67i0G1w94LNA5vxrYyJ3-4O5BbzSAM20EyMoYl2-R8gQrzmaj-dtgB5UsdgGl-PzDLMwQeeW15VuPx6Ynd59kWH-J2_KyuL3Trnb1h2lAiAvZ_UpW2qAnN2Zegm1DMGvXkQ",
-    badge: null,
-  },
-  {
-    id: 3,
-    name: "Rolls-Royce Ghost",
-    desc: "V12 Engine | Silver Frost",
-    price: "$2,500",
-    seats: 4,
-    speed: "250 KM/H",
-    category: "Executive",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBIiUx6rpV_48peR4eXEQCfAh-DdbzmPdLqqknSY26basXiW0GiYZcTN8v5G5nHvTbCpXzc-3qjUacmsfjsVAbsq7T0EGuLK6B6Qw7XDM3-YB5ZkGtmbkQdnWs0FzEsWQdsnvB9fbGI9mgI4rtmjx76jCXH3gjnx_0oY8U2jLD-xPojKz8OMJ4rS-YydK9Fpvcv2CC1t0sYnp_VIHJVRMaVDtpdxdP2WZrDqXZ4Hz2FISL5mO21hJKreVV5QDa2T70j-c5qjl5c3KE",
-    badge: "VIP Only",
-    badgeColor: "bg-yellow-500 text-black",
-  },
-];
+const categories = ["All Vehicles", "SUVs", "Executive"];
 
-const categories = ["All Vehicles", "Sports", "SUVs", "Executive"];
-
-export default function Fleet() {
+export default function Fleet({ initialVehicles = [] }: { initialVehicles?: Vehicle[] }) {
+  const [fleet, setFleet] = useState<Vehicle[]>(initialVehicles);
   const [filter, setFilter] = useState("All Vehicles");
-
   const filteredFleet =
     filter === "All Vehicles"
       ? fleet
-      : fleet.filter((item) => item.category === filter);
+      : fleet.filter((item) => item.category && (item.category === filter || (filter === "SUVs" && item.category === "suv") || (filter === "Executive" && item.category === "executive")));
+  const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (initialVehicles.length === 0) {
+        fetch('/api/vehicles')
+            .then(res => res.json())
+            .then(data => {
+                // Filter only Featured ones for Home Page (Land Cruiser, Fortuner, Civic)
+                // For now, simplify by just taking the first 3 or specific IDs if we want to mimic "Curated"
+                // Using specific IDs to maintain the "Curated" look
+                const curatedIds = ["land-cruiser-zx", "fortuner-legender", "civic-rs"];
+                const featured = data.filter((v: Vehicle) => curatedIds.includes(v.id));
+                setFleet(featured.length > 0 ? featured : data.slice(0, 3)); 
+            })
+            .catch(err => console.error(err));
+    } else {
+        // If passed from server, also filter for curated list
+        const curatedIds = ["land-cruiser-zx", "fortuner-legender", "civic-rs"];
+        const featured = initialVehicles.filter((v: Vehicle) => curatedIds.includes(v.id));
+         setFleet(featured.length > 0 ? featured : initialVehicles.slice(0, 3));
+    }
+  }, [initialVehicles]);
+
+  const openModal = (vehicle: Vehicle) => {
+    setSelectedVehicle(vehicle);
+    setActiveImageIndex(0);
+  };
+
+  const closeModal = () => {
+    setSelectedVehicle(null);
+  };
+
+  const handleWhatsAppBooking = () => {
+     if(!selectedVehicle) return;
+     const message = `I am interested in booking the *${selectedVehicle.name}*. \n\nPlease provide availability and rates.`;
+     const url = `https://wa.me/923017672571?text=${encodeURIComponent(message)}`;
+     window.open(url, '_blank');
+  };
 
   return (
     <section className="py-24 bg-background-dark">
@@ -95,7 +99,7 @@ export default function Fleet() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={car.id}
-                className="glass-card rounded-xl overflow-hidden group border-transparent hover:border-primary/20 transition-all min-w-[85vw] md:min-w-0 snap-center"
+                className="glass-card rounded-xl overflow-hidden group border-transparent hover:border-primary/20 transition-all min-w-[85vw] md:min-w-0 snap-center flex flex-col"
               >
                 <div className="aspect-[16/10] overflow-hidden relative">
                   <img
@@ -105,48 +109,172 @@ export default function Fleet() {
                   />
                   {car.badge && (
                     <div
-                      className={`absolute top-4 right-4 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest ${
-                        car.badgeColor || "bg-primary text-white"
-                      }`}
+                      className={`absolute top-4 right-4 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest bg-primary text-white`}
                     >
                       {car.badge}
                     </div>
                   )}
                 </div>
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="mb-4">
+                      
                       <h3 className="text-xl font-bold text-white mb-1">
                         {car.name}
                       </h3>
-                      <p className="text-slate-500 text-sm">{car.desc}</p>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-xs text-slate-500 uppercase block tracking-tighter">
-                        Per Day
-                      </span>
-                      <span className="text-xl font-bold text-white">
-                        {car.price}
-                      </span>
-                    </div>
+                      <p className="text-slate-500 text-xs uppercase tracking-widest">{car.category}</p>
+                   
                   </div>
-                  <div className="flex gap-4 mb-8">
-                    <div className="flex items-center gap-1 text-[10px] text-slate-400 uppercase tracking-widest">
-                      <Armchair className="w-4 h-4 text-primary" /> {car.seats} Seats
-                    </div>
-                    <div className="flex items-center gap-1 text-[10px] text-slate-400 uppercase tracking-widest">
-                      <Gauge className="w-4 h-4 text-primary" /> {car.speed}
-                    </div>
+                  
+                  <div className="mt-auto">
+                      <button 
+                        onClick={() => openModal(car)}
+                        className="w-full py-4 border border-white/10 rounded-full text-xs font-bold uppercase tracking-[0.2em] group-hover:bg-white group-hover:text-black transition-all"
+                    >
+                        View Details & Contact
+                    </button>
                   </div>
-                  <button className="w-full py-4 border border-white/10 rounded-full text-xs font-bold uppercase tracking-[0.2em] group-hover:bg-white group-hover:text-black transition-all">
-                    Reservation Details
-                  </button>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
       </div>
+
+      {/* Vehicle Details Modal */}
+      {mounted && createPortal(
+        <AnimatePresence>
+          {selectedVehicle && (
+            <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md overflow-y-auto">
+               <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 50 }}
+                  className="relative w-full max-w-5xl bg-[#111] border border-white/10 rounded-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] shadow-2xl"
+                  onClick={(e) => e.stopPropagation()} // Prevent closing when clicking modal content
+               >
+                  {/* Close Button */}
+                  <button 
+                      onClick={closeModal}
+                      className="absolute top-4 right-4 z-20 bg-black/50 text-white p-2 rounded-full hover:bg-white hover:text-black transition-colors"
+                  >
+                      <X className="w-5 h-5" />
+                  </button>
+
+                  {/* Left: Gallery */}
+                  <div className="w-full md:w-1/2 bg-black relative flex flex-col">
+                      <div className="flex-grow relative">
+                           <img 
+                              src={selectedVehicle.gallery[activeImageIndex]} 
+                              alt={selectedVehicle.name} 
+                              className="w-full h-full object-cover"
+                           />
+                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+                           <div className="absolute bottom-6 left-6">
+                              <h2 className="text-3xl font-bold text-white mb-1">{selectedVehicle.name}</h2>
+                               <p className="text-primary text-xs font-bold uppercase tracking-widest">{selectedVehicle.subtitle}</p>
+                           </div>
+                      </div>
+                      {/* Thumbnails if multiple images (Logic ready for when user adds videos/more photos) */}
+                      <div className="p-4 grid grid-cols-4 gap-2 bg-[#0a0a0c]">
+                          {selectedVehicle.gallery.map((img, idx) => (
+                               <button 
+                                  key={idx}
+                                  onClick={() => setActiveImageIndex(idx)}
+                                  className={`aspect-video rounded overflow-hidden border-2 ${activeImageIndex === idx ? "border-primary" : "border-transparent opacity-50 hover:opacity-100"}`}
+                               >
+                                  <img src={img} alt="" className="w-full h-full object-cover" />
+                               </button>
+                          ))}
+                      </div>
+                  </div>
+
+                  {/* Right: Details */}
+                  <div className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto custom-scrollbar">
+                      
+                      {/* Overview */}
+                      <div className="mb-10">
+                          <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                               Overview
+                          </h3>
+                          <p className="text-slate-400 text-sm leading-relaxed">
+                              {selectedVehicle.overview}
+                          </p>
+                      </div>
+
+                      {/* Key Info Grid */}
+                      <div className="mb-10">
+                          <h3 className="text-lg font-bold text-white mb-6 border-b border-white/10 pb-2">
+                              Key Information
+                          </h3>
+                          <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                               <div className="space-y-1">
+                                  <span className="text-[10px] uppercase text-slate-500 tracking-widest block">Model Year</span>
+                                  <div className="flex items-center gap-2 text-white text-sm font-medium">
+                                      <Calendar className="w-4 h-4 text-primary" /> {selectedVehicle.specs.year}
+                                  </div>
+                               </div>
+                               <div className="space-y-1">
+                                  <span className="text-[10px] uppercase text-slate-500 tracking-widest block">Seating</span>
+                                  <div className="flex items-center gap-2 text-white text-sm font-medium">
+                                      <User className="w-4 h-4 text-primary" /> {selectedVehicle.specs.seats}
+                                  </div>
+                               </div>
+                               <div className="space-y-1">
+                                  <span className="text-[10px] uppercase text-slate-500 tracking-widest block">Engine</span>
+                                  <div className="flex items-center gap-2 text-white text-sm font-medium">
+                                      <Gauge className="w-4 h-4 text-primary" /> {selectedVehicle.specs.engine}
+                                  </div>
+                               </div>
+                               <div className="space-y-1">
+                                  <span className="text-[10px] uppercase text-slate-500 tracking-widest block">Fuel Type</span>
+                                  <div className="flex items-center gap-2 text-white text-sm font-medium">
+                                      <Fuel className="w-4 h-4 text-primary" /> {selectedVehicle.specs.fuel}
+                                  </div>
+                               </div>
+                               <div className="space-y-1">
+                                  <span className="text-[10px] uppercase text-slate-500 tracking-widest block">Transmission</span>
+                                  <div className="flex items-center gap-2 text-white text-sm font-medium">
+                                      <Settings className="w-4 h-4 text-primary" /> {selectedVehicle.specs.transmission}
+                                  </div>
+                               </div>
+                          </div>
+                      </div>
+
+                      {/* Rental Details */}
+                      <div className="mb-10 bg-white/5 rounded-xl p-6 border border-white/5">
+                          <h3 className="text-sm font-bold text-white mb-4 uppercase tracking-widest flex items-center gap-2">
+                              Rental Conditions
+                          </h3>
+                          <ul className="space-y-3">
+                               <li className="flex justify-between text-sm">
+                                   <span className="text-slate-400">Min. Duration</span>
+                                   <span className="text-white font-medium">{selectedVehicle.rental.minDuration}</span>
+                               </li>
+                               <li className="flex justify-between text-sm">
+                                   <span className="text-slate-400">Availability</span>
+                                   <span className="text-white font-medium text-right">{selectedVehicle.rental.availability}</span>
+                               </li>
+                          </ul>
+                      </div>
+
+                      {/* CTA */}
+                      <button 
+                          onClick={handleWhatsAppBooking}
+                          className="w-full py-4 bg-primary text-white rounded-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
+                      >
+                          Request Booking
+                      </button>
+                      <p className="text-center text-xs text-slate-500 mt-4">
+                          *Rates provided upon request via WhatsApp
+                      </p>
+
+                  </div>
+               </motion.div>
+            </div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 }

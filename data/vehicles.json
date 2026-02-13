@@ -1,0 +1,209 @@
+[
+    {
+        "id": "land-cruiser-zx",
+        "name": "Land Cruiser ZX V8",
+        "subtitle": "The King of Off-Road Luxury",
+        "category": "suv",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
+        "badge": "Most Popular",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA"
+        ],
+        "overview": "This vehicle is privately owned and professionally maintained. Ideal for business travel, family trips, events, and premium city use. Available with or without chauffeur depending on availability.",
+        "specs": {
+            "year": "2024",
+            "seats": "7 Adults",
+            "engine": "3.5L V6 Twin-Turbo",
+            "fuel": "Petrol",
+            "transmission": "10-Speed Auto"
+        },
+        "rental": {
+            "minDuration": "2 Days",
+            "availability": "Lahore / Islamabad / Narowal"
+        }
+    },
+    {
+        "id": "fortuner-legender",
+        "name": "Toyota Fortuner Legender",
+        "subtitle": "Dominating Power",
+        "category": "suv",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
+        "badge": "Available",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA"
+        ],
+        "overview": "A symbol of power and luxury. The Fortuner Legender offers a commanding drive with a premium interior, perfect for both off-road adventures and weddings.",
+        "specs": {
+            "year": "2023",
+            "seats": "7 Adults",
+            "engine": "2.8L Diesel",
+            "fuel": "Diesel",
+            "transmission": "6-Speed Auto"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "All Punjab"
+        }
+    },
+    {
+        "id": "prado",
+        "name": "Toyota Prado",
+        "subtitle": "Refined Capability",
+        "category": "suv",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
+        "badge": null,
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA"
+        ],
+        "overview": "The perfect balance of comfort and capability. Ideal for long journeys and family trips across varied terrain.",
+        "specs": {
+            "year": "2022",
+            "seats": "7 Adults",
+            "engine": "2.7L Petrol",
+            "fuel": "Petrol",
+            "transmission": "Auto"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "Lahore / Narowal"
+        }
+    },
+    {
+        "id": "civic-rs",
+        "name": "Honda Civic RS",
+        "subtitle": "Sporty & Sophisticated",
+        "category": "executive",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBIiUx6rpV_48peR4eXEQCfAh-DdbzmPdLqqknSY26basXiW0GiYZcTN8v5G5nHvTbCpXzc-3qjUacmsfjsVAbsq7T0EGuLK6B6Qw7XDM3-YB5ZkGtmbkQdnWs0FzEsWQdsnvB9fbGI9mgI4rtmjx76jCXH3gjnx_0oY8U2jLD-xPojKz8OMJ4rS-YydK9Fpvcv2CC1t0sYnp_VIHJVRMaVDtpdxdP2WZrDqXZ4Hz2FISL5mO21hJKreVV5QDa2T70j-c5qjl5c3KE",
+        "badge": "Executive Choice",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBIiUx6rpV_48peR4eXEQCfAh-DdbzmPdLqqknSY26basXiW0GiYZcTN8v5G5nHvTbCpXzc-3qjUacmsfjsVAbsq7T0EGuLK6B6Qw7XDM3-YB5ZkGtmbkQdnWs0FzEsWQdsnvB9fbGI9mgI4rtmjx76jCXH3gjnx_0oY8U2jLD-xPojKz8OMJ4rS-YydK9Fpvcv2CC1t0sYnp_VIHJVRMaVDtpdxdP2WZrDqXZ4Hz2FISL5mO21hJKreVV5QDa2T70j-c5qjl5c3KE"
+        ],
+        "overview": "The ultimate sedan for city executives. Sharp design, comfortable ride, and excellent fuel economy.",
+        "specs": {
+            "year": "2024",
+            "seats": "5 Adults",
+            "engine": "1.5L Turbo",
+            "fuel": "Petrol",
+            "transmission": "CVT"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "Narowal / Lahore"
+        }
+    },
+    {
+        "id": "corolla-grande",
+        "name": "Toyota Corolla Grande",
+        "subtitle": "Reliability Meets Comfort",
+        "category": "executive",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBFMmUEBn-P9whpJfBY2tTnFt_QbtcojXKFCcJk0DYPHR6hlKirMmZBfdc306D6p6MocOT1FT36x5k_WR7hXqdvxlrTddom2WzfaUWsjz1FZNQ9W9KpszVdfsQ9y5f0jO4q6h3Ctp9c94fOEMyJv0KDMpXh9S2gG9c8IAgOkit8fJ_hNv5_rO6qzOMCqtGFfo13ZHZUQ18RPidJUswT59rKKTcPTGMdScUP5ixsSzhjyUGczW-HA2W7oKSaegKP9VHVUB9rRrGcGww",
+        "badge": "Best Value",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBFMmUEBn-P9whpJfBY2tTnFt_QbtcojXKFCcJk0DYPHR6hlKirMmZBfdc306D6p6MocOT1FT36x5k_WR7hXqdvxlrTddom2WzfaUWsjz1FZNQ9W9KpszVdfsQ9y5f0jO4q6h3Ctp9c94fOEMyJv0KDMpXh9S2gG9c8IAgOkit8fJ_hNv5_rO6qzOMCqtGFfo13ZHZUQ18RPidJUswT59rKKTcPTGMdScUP5ixsSzhjyUGczW-HA2W7oKSaegKP9VHVUB9rRrGcGww"
+        ],
+        "overview": "Pakistan's favorite executive sedan. Spacious interior, smooth drive, and perfect for both city and highway travel.",
+        "specs": {
+            "year": "2023",
+            "seats": "5 Adults",
+            "engine": "1.8L",
+            "fuel": "Petrol",
+            "transmission": "CVT"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "All Locations"
+        }
+    },
+    {
+        "id": "sonata",
+        "name": "Hyundai Sonata",
+        "subtitle": "Premium Sedan Luxury",
+        "category": "executive",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBFMmUEBn-P9whpJfBY2tTnFt_QbtcojXKFCcJk0DYPHR6hlKirMmZBfdc306D6p6MocOT1FT36x5k_WR7hXqdvxlrTddom2WzfaUWsjz1FZNQ9W9KpszVdfsQ9y5f0jO4q6h3Ctp9c94fOEMyJv0KDMpXh9S2gG9c8IAgOkit8fJ_hNv5_rO6qzOMCqtGFfo13ZHZUQ18RPidJUswT59rKKTcPTGMdScUP5ixsSzhjyUGczW-HA2W7oKSaegKP9VHVUB9rRrGcGww",
+        "badge": null,
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBFMmUEBn-P9whpJfBY2tTnFt_QbtcojXKFCcJk0DYPHR6hlKirMmZBfdc306D6p6MocOT1FT36x5k_WR7hXqdvxlrTddom2WzfaUWsjz1FZNQ9W9KpszVdfsQ9y5f0jO4q6h3Ctp9c94fOEMyJv0KDMpXh9S2gG9c8IAgOkit8fJ_hNv5_rO6qzOMCqtGFfo13ZHZUQ18RPidJUswT59rKKTcPTGMdScUP5ixsSzhjyUGczW-HA2W7oKSaegKP9VHVUB9rRrGcGww"
+        ],
+        "overview": "Step into the future with the Sonata. Panoramic sunroof, digital cockpit, and executive rear seating.",
+        "specs": {
+            "year": "2023",
+            "seats": "5 Adults",
+            "engine": "2.5L",
+            "fuel": "Petrol",
+            "transmission": "Auto"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "Lahore"
+        }
+    },
+    {
+        "id": "coaster",
+        "name": "Toyota Coaster (Saloon)",
+        "subtitle": "Premium Group Travel",
+        "category": "trips",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
+        "badge": "29 Seater",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA"
+        ],
+        "overview": "The best choice for large family trips, weddings, or corporate events. Fully air-conditioned with comfortable high-roof seating.",
+        "specs": {
+            "year": "2022",
+            "seats": "29 Adults",
+            "engine": "4.0L Diesel",
+            "fuel": "Diesel",
+            "transmission": "Manual"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "All Locations"
+        }
+    },
+    {
+        "id": "grand-cabin",
+        "name": "Toyota HiAce Grand Cabin",
+        "subtitle": "Versatile People Mover",
+        "category": "trips",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
+        "badge": "13 Seater",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA"
+        ],
+        "overview": "Perfect for intercity travel and tours. High roof comfort with ample luggage space.",
+        "specs": {
+            "year": "2023",
+            "seats": "13 Adults",
+            "engine": "2.8L Diesel",
+            "fuel": "Diesel",
+            "transmission": "Auto"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "All Locations"
+        }
+    },
+    {
+        "id": "suzuki-every",
+        "name": "Suzuki Every / Bolan",
+        "subtitle": "Compact Logistics",
+        "category": "classic",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA",
+        "badge": "Budget Friendly",
+        "gallery": [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBsJ3LaigJ_3c2D7c0dXMdw3LxtBeBh5vOiz8p8BTdj4YAcL0JQuehyuE-xz8Zr2_M9OC5CfI1A_KEc3yvoq_Pw3spYXuuIwdsKG3QJzcuWpb2iXcjU-Zqzz8XkjNNKbsWgG3HRCeb6Mpi10nslW2cy0A5MBnGuTRGAfzay8a0NXan46EBbUsc3O_PVld9QMckPW0_f2Ib2bItnn_10nbs9tfNAThU9uhNBjPNwGm37RMkOPrcz8B_HrlNe6MZ-e3q0wi45f7qpmaA"
+        ],
+        "overview": "The workhorse for small cargo and budget family travel.",
+        "specs": {
+            "year": "2022",
+            "seats": "7 (or Cargo)",
+            "engine": "660cc",
+            "fuel": "Petrol",
+            "transmission": "Auto/Manual"
+        },
+        "rental": {
+            "minDuration": "1 Day",
+            "availability": "Narowal"
+        }
+    }
+]

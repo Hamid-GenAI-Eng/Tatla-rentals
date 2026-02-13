@@ -8,21 +8,11 @@ import { createPortal } from "react-dom";
 // import Scene from "../3d/Scene"; // Temporarily disabled for HQ Image request
 
 export default function Hero() {
-  const [showCallbackModal, setShowCallbackModal] = useState(false);
-  const [callbackTime, setCallbackTime] = useState("");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const handleRequestCallback = () => {
-    if (!callbackTime) return;
-    const message = `Hello, I would like to request a callback at ${callbackTime}.`;
-    const url = `https://wa.me/923017672571?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-    setShowCallbackModal(false);
-  };
 
   return (
     <section className="relative h-screen w-full flex items-center overflow-hidden bg-background-dark">
@@ -71,7 +61,7 @@ export default function Hero() {
             className="text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-10 max-w-lg"
           >
             Experience the pinnacle of luxury car rentals. Curated fleet of the
-            world&apos;s most prestigious vehicles, ready for the elite.
+            Pakistan&apos;s most prestigious vehicles, ready for the elite.
           </motion.p>
 
           <motion.div
@@ -84,12 +74,14 @@ export default function Hero() {
               Explore Fleet
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <button 
-              onClick={() => setShowCallbackModal(true)}
+            <a 
+              href="https://wa.me/923017672571?text=Hi,%20I%20would%20like%20to%20request%20a%20callback."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white/5 backdrop-blur-md border border-white/10 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all hover:scale-105 active:scale-95"
             >
               Request a CallBack
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -106,52 +98,6 @@ export default function Hero() {
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-white to-transparent" />
       </motion.div>
-      {/* Callback Modal */}
-      <AnimatePresence>
-        {showCallbackModal && mounted && createPortal(
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              className="glass-card p-8 rounded-2xl max-w-sm w-full relative bg-[#111] border border-white/10"
-            >
-              <button 
-                onClick={() => setShowCallbackModal(false)}
-                className="absolute top-4 right-4 text-slate-400 hover:text-white"
-              >
-                <X className="w-5 h-5" />
-              </button>
-              
-              <h3 className="text-xl font-bold text-white mb-2">Request a Callback</h3>
-              <p className="text-slate-400 text-sm mb-6">
-                Please select a preferred time for us to contact you via WhatsApp.
-              </p>
-              
-              <div className="space-y-4">
-                <div>
-                   <label className="text-xs font-bold uppercase tracking-widest text-primary block mb-2">Preferred Time</label>
-                   <input 
-                      type="time" 
-                      value={callbackTime}
-                      onChange={(e) => setCallbackTime(e.target.value)}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-primary transition-colors"
-                   />
-                </div>
-                
-                <button 
-                  onClick={handleRequestCallback}
-                  disabled={!callbackTime}
-                  className="w-full bg-primary disabled:opacity-50 disabled:cursor-not-allowed text-white py-3 rounded-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
-                >
-                  <Clock className="w-4 h-4" /> Schedule Callback
-                </button>
-              </div>
-            </motion.div>
-          </div>,
-          document.body
-        )}
-      </AnimatePresence>
     </section>
   );
 }

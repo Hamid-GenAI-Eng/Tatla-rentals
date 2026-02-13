@@ -1,4 +1,4 @@
-import ServicesClient from "../components/sections/ServicesClient";
+import ServicesClient from "../../components/sections/ServicesClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
